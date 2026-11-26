@@ -1,0 +1,234 @@
+/*
+ * Motywy realizacji demonstracyjnych. Każdy nadpisuje te same tokeny,
+ * więc komponenty UI działają we wszystkich projektach bez zmian.
+ * Tę samą klasę dostają okna modalne renderowane w portalach.
+ */
+
+@layer base {
+  /* Salon kosmetyczny: perła, śliwka i szampańskie złoto */
+  .theme-salon {
+    --background: #fbf6f8;
+    --foreground: #321a30;
+    --card: #ffffff;
+    --card-foreground: #321a30;
+    --popover: #ffffff;
+    --popover-foreground: #321a30;
+    --primary: #5c2551;
+    --primary-foreground: #fff6fb;
+    --secondary: #f3e4ec;
+    --secondary-foreground: #45203f;
+    --muted: #f5eaf0;
+    --muted-foreground: #735a70;
+    --accent: #f4ead8;
+    --accent-foreground: #6b4e1d;
+    --border: #ecdce5;
+    --input: #dfc8d5;
+    --ring: #9a5b8a;
+    --gold: #a57f3c;
+    --glass: rgb(255 250 252 / 0.68);
+    --glass-border: rgb(255 255 255 / 0.8);
+    --shadow-color: 315 35% 22%;
+    --radius: 1.25rem;
+    --font-display-face: var(--font-cormorant);
+    --font-body-face: var(--font-jost);
+  }
+
+  .dark .theme-salon {
+    --background: #180c17;
+    --foreground: #f8eaf3;
+    --card: #231222;
+    --card-foreground: #f8eaf3;
+    --popover: #281527;
+    --popover-foreground: #f8eaf3;
+    --primary: #e9b8d5;
+    --primary-foreground: #2c1029;
+    --secondary: #362034;
+    --secondary-foreground: #f5dcec;
+    --muted: #2d1a2c;
+    --muted-foreground: #c4a5bd;
+    --accent: #3a2c17;
+    --accent-foreground: #ecd7a8;
+    --border: #422a40;
+    --input: #543852;
+    --ring: #e9b8d5;
+    --gold: #d6b575;
+    --glass: rgb(40 20 38 / 0.6);
+    --glass-border: rgb(255 214 240 / 0.14);
+    --shadow-color: 310 70% 3%;
+  }
+
+  /* Restauracja: butelkowa zieleń i mosiądz */
+  .theme-restaurant {
+    --glass: rgb(15 29 25 / 0.72);
+    --glass-border: rgb(220 179 106 / 0.2);
+    --background: #0f1d19;
+    --foreground: #eef1e6;
+    --card: #162822;
+    --card-foreground: #eef1e6;
+    --popover: #162822;
+    --popover-foreground: #eef1e6;
+    --primary: #dcb36a;
+    --primary-foreground: #14130b;
+    --secondary: #1f362e;
+    --secondary-foreground: #eef1e6;
+    --muted: #1a2f28;
+    --muted-foreground: #a9bdb0;
+    --accent: #263f35;
+    --accent-foreground: #f2d9a6;
+    --border: #2a453a;
+    --input: #365649;
+    --ring: #dcb36a;
+    --radius: 0.25rem;
+    --font-display-face: var(--font-cormorant);
+    --font-body-face: var(--font-jost);
+    color-scheme: dark;
+  }
+
+  /* Firma budowlana: grafit, beton i żółć ostrzegawcza */
+  .theme-construction {
+    --glass: rgb(255 255 255 / 0.75);
+    --glass-border: rgb(255 255 255 / 0.9);
+    --background: #eceeef;
+    --foreground: #1a2228;
+    --card: #ffffff;
+    --card-foreground: #1a2228;
+    --popover: #ffffff;
+    --popover-foreground: #1a2228;
+    --primary: #f2b705;
+    --primary-foreground: #1a1600;
+    --secondary: #1f2a32;
+    --secondary-foreground: #f2f4f5;
+    --muted: #e1e5e7;
+    --muted-foreground: #49565f;
+    --accent: #fdf0c4;
+    --accent-foreground: #4a3800;
+    --border: #cfd5d9;
+    --input: #b9c2c8;
+    --ring: #1f2a32;
+    --radius: 0.375rem;
+  }
+
+  .dark .theme-construction {
+    --glass: rgb(26 33 39 / 0.72);
+    --glass-border: rgb(255 255 255 / 0.1);
+    --background: #12171b;
+    --foreground: #eef1f3;
+    --card: #1a2127;
+    --card-foreground: #eef1f3;
+    --popover: #1a2127;
+    --popover-foreground: #eef1f3;
+    --secondary: #26313a;
+    --muted: #202930;
+    --muted-foreground: #a8b5be;
+    --accent: #3a3010;
+    --accent-foreground: #fbe29a;
+    --border: #2d3841;
+    --input: #3b4852;
+    --ring: #f2b705;
+  }
+
+  /* Gabinet stomatologiczny: jasna mięta i atramentowy błękit */
+  .theme-dental {
+    --glass: rgb(255 255 255 / 0.7);
+    --glass-border: rgb(255 255 255 / 0.9);
+    --background: #f3fafa;
+    --foreground: #0d2f42;
+    --card: #ffffff;
+    --card-foreground: #0d2f42;
+    --popover: #ffffff;
+    --popover-foreground: #0d2f42;
+    --primary: #08706d;
+    --primary-foreground: #ffffff;
+    --secondary: #dcf1ef;
+    --secondary-foreground: #0b3f45;
+    --muted: #e7f4f4;
+    --muted-foreground: #426270;
+    --accent: #ffe9e2;
+    --accent-foreground: #8a3320;
+    --border: #d2e8e7;
+    --input: #b9dad9;
+    --ring: #0d8f8a;
+    --radius: 1.5rem;
+    --font-display-face: var(--font-instrument);
+  }
+
+  .dark .theme-dental {
+    --glass: rgb(13 38 49 / 0.7);
+    --glass-border: rgb(94 234 212 / 0.14);
+    --background: #071a22;
+    --foreground: #e4f6f6;
+    --card: #0d2631;
+    --card-foreground: #e4f6f6;
+    --popover: #0d2631;
+    --popover-foreground: #e4f6f6;
+    --primary: #5eead4;
+    --primary-foreground: #042321;
+    --secondary: #123842;
+    --secondary-foreground: #d3f3ef;
+    --muted: #10303b;
+    --muted-foreground: #9fc2c8;
+    --accent: #3a211c;
+    --accent-foreground: #ffc2b0;
+    --border: #1a414d;
+    --input: #255361;
+    --ring: #5eead4;
+  }
+
+  /* Sklep: kreda, ultramaryna i glina */
+  .theme-shop {
+    --glass: rgb(255 255 255 / 0.72);
+    --glass-border: rgb(255 255 255 / 0.9);
+    --background: #f4f3f0;
+    --foreground: #1d2147;
+    --card: #ffffff;
+    --card-foreground: #1d2147;
+    --popover: #ffffff;
+    --popover-foreground: #1d2147;
+    --primary: #2536a8;
+    --primary-foreground: #ffffff;
+    --secondary: #e7e6e2;
+    --secondary-foreground: #1d2147;
+    --muted: #eae9e5;
+    --muted-foreground: #585a72;
+    --accent: #e3e6fb;
+    --accent-foreground: #222f8c;
+    --border: #dcdad4;
+    --input: #c9c7c0;
+    --ring: #2536a8;
+    --radius: 0.5rem;
+    --font-display-face: var(--font-jost);
+    --font-body-face: var(--font-jost);
+  }
+
+  .dark .theme-shop {
+    --glass: rgb(23 26 54 / 0.72);
+    --glass-border: rgb(154 168 255 / 0.14);
+    --background: #0e1024;
+    --foreground: #eeeef8;
+    --card: #171a36;
+    --card-foreground: #eeeef8;
+    --popover: #171a36;
+    --popover-foreground: #eeeef8;
+    --primary: #9aa8ff;
+    --primary-foreground: #0b0f2e;
+    --secondary: #222648;
+    --secondary-foreground: #eeeef8;
+    --muted: #1d2040;
+    --muted-foreground: #abaecc;
+    --accent: #232a5e;
+    --accent-foreground: #cdd3ff;
+    --border: #2c3058;
+    --input: #3a3f6d;
+    --ring: #9aa8ff;
+  }
+
+  .theme-salon,
+  .theme-restaurant,
+  .theme-construction,
+  .theme-dental,
+  .theme-shop {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body-face), ui-sans-serif, system-ui, sans-serif;
+  }
+}
